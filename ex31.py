@@ -1,30 +1,13 @@
-class Carrinho:
 
-    def __init__(self):
-        self.lista_produtos = []
+class Livro:
+    def __init__ (self,titulo,autor,disponivel):
+        self.titulo = titulo 
+        self.autor = autor 
+        self.disponivel = disponivel 
 
-    def adicionar_produto(self, produto):
-        self.lista_produtos.append(produto)
-        print(f'{produto} adicionado ao carrinho.')
-
-    def remover_produto(self, produto):
-        if produto in self.lista_produtos:
-            self.lista_produtos.remove(produto)
-            print(f'{produto} removido do carrinho.')
-        else:
-            print('Este produto não está no carrinho.')
-
-    def mostrar_total(self):
-        print('Produtos no carrinho:')
-        print(self.lista_produtos)
-        print(f'Quantidade: {len(self.lista_produtos)}')
-
-
-p1 = Carrinho()
-p1.adicionar_produto('Teclado Razer')
-p1.adicionar_produto('Mouse Razer')
-p1.adicionar_produto('RTX 3060')
-
-p1.mostrar_total()
-p1.remover_produto('Mouse Razer')
-p1.mostrar_total()
+class Biblioteca:
+    def __init__(self,adicionar,emprestar,devolver,listar):
+        self.adicionar = adicionar
+        self.emprestar = emprestar
+        self.devolver = devolver
+        self.listar = listar
